@@ -1,0 +1,75 @@
+{
+  "name": "clips-api",
+  "description": "",
+  "version": "0.0.0",
+  "homepage": "",
+  "private": true,
+  "main": "src",
+  "keywords": [
+    "feathers"
+  ],
+  "author": {
+    "name": "TimIsOverpowered",
+    "email": "admin@angelthump.com"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "src",
+    "test": "test/",
+    "config": "config/"
+  },
+  "engines": {
+    "node": "^12.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run mocha",
+    "lint": "eslint src/. test/. --config .eslintrc.json --fix",
+    "dev": "nodemon src/",
+    "start": "node src/",
+    "mocha": "mocha test/ --recursive --exit",
+    "production": "NODE_ENV=production node src",
+    "production-windows": "set NODE_ENV=production&&node src"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ],
+    "ignore": []
+  },
+  "dependencies": {
+    "@feathersjs/authentication": "^4.5.9",
+    "@feathersjs/authentication-local": "^4.5.9",
+    "@feathersjs/authentication-oauth": "^4.5.9",
+    "@feathersjs/configuration": "^4.5.9",
+    "@feathersjs/errors": "^4.5.9",
+    "@feathersjs/express": "^4.5.9",
+    "@feathersjs/feathers": "^4.5.9",
+    "@feathersjs/socketio": "^4.5.9",
+    "@feathersjs/transport-commons": "^4.5.9",
+    "compression": "^1.7.4",
+    "connect-redis": "^5.0.0",
+    "cors": "^2.8.5",
+    "feathers-authentication-hooks": "^1.0.2",
+    "feathers-hooks-common": "^5.0.4",
+    "feathers-mongodb": "^6.2.0",
+    "feathers-sequelize": "^6.2.0",
+    "helmet": "^4.1.1",
+    "moment": "^2.29.1",
+    "mongodb": "^3.6.2",
+    "mongodb-core": "^3.2.7",
+    "mongoose": "^5.10.9",
+    "pg": "^8.4.1",
+    "redis": "^3.0.2",
+    "sequelize": "^6.3.5",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "axios": "^0.20.0",
+    "eslint": "^7.11.0",
+    "mocha": "^8.2.0",
+    "nodemon": "^2.0.6"
+  }
+}

@@ -1,0 +1,42 @@
+{
+    "host": "localhost",
+    "port": 3030,
+    "public": "../public/",
+    "paginate": {
+      "default": 10,
+      "max": 50
+    },
+    "authentication": {
+      "entity": "user",
+      "service": "users",
+      "secret": "YOUR_SECRET",
+      "authStrategies": [
+        "jwt"
+      ],
+      "jwtOptions": {
+        "header": {
+          "typ": "access"
+        },
+        "audience": "YOUR_SITE",
+        "issuer": "feathers",
+        "algorithm": "HS256",
+        "expiresIn": "14d"
+      },
+      "oauth": {
+        "redirect": "YOUR_FRONTEND_SITE",
+        "defaults": {
+          "protocol": "https",
+          "host": "YOUR_SITE",
+          "transport": "session"
+        },
+        "twitch": {
+          "key": "YOUR_TWITCH_CLIENT_ID",
+          "secret": "YOUR_TWITCH_SECRET",
+          "scope": "user:read:email",
+          "redirect_uri": "YOUR_REDIRECT_URI"
+        }
+      }
+    },
+    "sessionSecret": "YOUR_SESSION_SECRET",
+    "postgres": "YOUR_POSTGRES_CONNECTION_URI"
+}
